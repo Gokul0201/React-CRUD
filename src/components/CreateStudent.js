@@ -22,10 +22,12 @@ function CreateStudent(props) {
   let students=[...props.data.students]
   students.push(data)
   props.data.setStudents(students)
-  navigate ('/dashboard')
+  navigate ('/student-list')
 }
   return <>
-    <div>
+<div className='container'>
+      <div className='row '>
+        <div className='col-lg-8'>
     <Form>
   <Form.Group className="mb-3">
     <Form.Label>Name</Form.Label>
@@ -48,9 +50,11 @@ function CreateStudent(props) {
   <Button variant="primary" onClick={() =>handleSubmit()}>
     Submit
   </Button>
-</Form>
-
-    </div>
+  </Form>
+  </div>
+ </div>
+</div>
+    
     </>
 }
 export default CreateStudent

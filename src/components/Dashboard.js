@@ -1,24 +1,13 @@
 import React from 'react'
-import Table from 'react-bootstrap/Table'
-import Button from 'react-bootstrap/Button';
-import {useNavigate} from 'react-router-dom';
+import Navbar from './Navbar'; 
 
-function Dashboard(props) {
-    let navigate=useNavigate();
-    
-    let handleDelete=(i)=>{
-        let students = [...props.data.students];
-        students.splice(i,1);
-        props.data.setStudents(students)
-    }
-      
-    
+function Dashboard(props) {  
   return <>
     <div id="content-wrapper" className="d-flex flex-column container-fluid">
 
 {/* <!-- Main Content --> */}
 <div id="content">
-
+<Navbar/>
     {/* <!-- Begin Page Content --> */}
     <div className="container-fluid">
 
@@ -125,38 +114,8 @@ function Dashboard(props) {
 
 
 {/* Start of the Student details */}
-<div>
-<Table striped bordered hover>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Mobile</th>
-          <th>Batch</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        {
-            props.data.students.map((e,i)=>{
-                return <tr key={i}>
-                    <td>{i+1}</td>
-                    <td>{e.name}</td>
-                    <td>{e.email}</td>
-                    <td>{e.mobile}</td>
-                    <td>{e.batch}</td>
-                    <td>
-                        <Button variant="primary" onClick={() => navigate(`/edit-student/${i}`)}>Edit</Button>
-                        &nbsp;&nbsp;
-                        <Button variant="danger" onClick={() => handleDelete(i) }>Delete</Button>
-                    </td>
-                </tr>
-            })
-        }
-      </tbody>
-    </Table>                                         
-</div>
+
+
 {/* End of the Student details */}
 
 {/* <!-- Footer --> */}

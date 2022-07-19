@@ -22,7 +22,7 @@ function EditStudent(props) {
     let students=[...props.data.students]
     students.splice(params.id,1,data)
     props.data.setStudents(students)
-    navigate('/dashboard')
+    navigate('/student-list')
   }
 
   

@@ -40,9 +40,10 @@ function Sidebar() {
         <i className="fas fa-fw fa-cog"></i>
         <Link to='/create-student'><span style={{"color":"white"}}>Create Student</span></Link>
     </div>
-
-    
-
+    <div className="nav-link collapsed">
+        <i className="fas fa-fw fa-cog"></i>
+    <Link to='/Student-list'><span style={{"color":"white"}}>Student List</span></Link>
+    </div>
 </li>
 
 
