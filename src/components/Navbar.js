@@ -1,4 +1,6 @@
 import React from 'react'
+import logo from '../3135715.png'
+
 
 function Navbar() {
   return<>
@@ -175,7 +177,7 @@ function Navbar() {
                             <a className="nav-link dropdown-toggle" href="#!" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span className="mr-2 d-none d-lg-inline text-gray-600 small">Gokulakrishnan</span>
-                                <img className="img-profile rounded-circle"src="/public/logo192.png" alt="..."/>
+                                <img className="img-profile rounded-circle"src={logo} alt=''/>
                             </a>
                             {/* <!-- Dropdown - User Information --> */}
                             <div className="dropdown-menu dropdown-menu-right shadow animated--grow-in"

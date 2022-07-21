@@ -8,6 +8,7 @@ import EditStudent from './components/EditStudent';
 import StudentList from './components/StudentList';
 
 
+
 function App() {
   let data = {
     monthly:"Rs. 50,000",
@@ -19,7 +20,7 @@ function App() {
   let [students,setStudents] =useState([
     {
       name:"ranjith",
-      email:"ranjitj@gmail.com",
+      email:"ranjith@gmail.com",
       mobile:"123456789",
       batch:"B36WDT",
     },
@@ -40,7 +41,7 @@ function App() {
   <div className='main-wrapper'>
   
       <BrowserRouter>
-     
+      
       <Sidebar/>
       
           <Routes>
